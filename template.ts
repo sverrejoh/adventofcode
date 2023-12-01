@@ -16,17 +16,18 @@ const main = () => {
 
 if (import.meta.vitest) {
   const { it, expect } = import.meta.vitest;
+  const { basename } = await import("path");
 
   const EXAMPLE_1 = ``;
 
-  it("solves part one with example data", () => {
-    expect(part_one(EXAMPLE_1)).toBe(142);
+  it(`solves ${basename(__filename)} part one with example data`, () => {
+    expect(part_one(EXAMPLE_1)).toBe(undefined);
   });
 
   const EXAMPLE_2 = ``;
 
-  it("solves part two with example data", () => {
-    expect(part_two(EXAMPLE_2)).toBe(281);
+  it.skip(`solves ${basename(__filename)} part two with example data`, () => {
+    expect(part_two(EXAMPLE_2)).toBe(undefined);
   });
 }
 
