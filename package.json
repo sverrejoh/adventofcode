@@ -8,7 +8,7 @@
     "test": "vitest",
     "aoc:run": "tsx",
     "aoc:watch": "tsx --watch",
-    "start": "./bin/start.sh"
+    "start": "./scripts/start.sh"
   },
   "dependencies": {
     "prettier": "^3.1.0",
