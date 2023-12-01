@@ -44,6 +44,22 @@ Your puzzle answer was 55172.
 
 */
 
+const part_one = (input: string) => {
+  return input
+    .split("\n")
+    .filter((line) => Boolean(line.length))
+    .reduce((prev, curr) => {
+      const numbers = curr
+        .split("")
+        .map((ch) => parseInt(ch, 10))
+        .filter((n) => !isNaN(n));
+      const first = numbers[0];
+      const second = numbers[numbers.length - 1];
+      const sum = parseInt(`${first}${second}`, 10);
+      return prev + sum;
+    }, 0);
+};
+
 /*
 --- Part Two ---
 
@@ -70,22 +86,6 @@ What is the sum of all of the calibration values?
 Your puzzle answer was 54925.
 
 */
-
-const part_one = (input: string) => {
-  return input
-    .split("\n")
-    .filter((line) => Boolean(line.length))
-    .reduce((prev, curr) => {
-      const numbers = curr
-        .split("")
-        .map((ch) => parseInt(ch, 10))
-        .filter((n) => !isNaN(n));
-      const first = numbers[0];
-      const second = numbers[numbers.length - 1];
-      const sum = parseInt(`${first}${second}`, 10);
-      return prev + sum;
-    }, 0);
-};
 
 const part_two = (input: string) => {
   return input

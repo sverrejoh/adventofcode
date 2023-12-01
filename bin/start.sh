@@ -12,7 +12,7 @@ filename="$path/day-$day.ts"
 if [ "$month" -eq 12 ] && [ "$day" -ge 1 ] && [ "$day" -le 24 ]; then
     if [ ! -f "$filename" ]; then
 				mkdir -p "$path"
-        touch "$filename"
+        cp "$root/template.ts" "$filename"
     else
         echo "File $filename already exists."
     fi
