@@ -1,3 +1,5 @@
+import { name } from "../src/name";
+
 /*
 --- Day 2: Cube Conundrum ---
 You're launched high into the atmosphere! The apex of your trajectory just barely reaches the surface of a large island floating in the sky. You gently land in a fluffy pile of leaves. It's quite cold, but you don't see much snow. An Elf runs over to greet you.
@@ -95,13 +97,12 @@ const part_two = (input: string) => {
 };
 
 const main = () => {
-  console.log("Part One:", part_one(INPUT));
-  console.log("Part Two:", part_two(INPUT));
+  console.log(`${name(__filename)}, Part One:`, part_one(INPUT));
+  console.log(`${name(__filename)}, Part Two:`, part_two(INPUT));
 };
 
 if (import.meta.vitest) {
   const { it, expect } = import.meta.vitest;
-  const { basename } = await import("path");
 
   const EXAMPLE_1 = `Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
 Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
@@ -109,7 +110,7 @@ Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red
 Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red
 Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green`;
 
-  it(`solves ${basename(__filename)} part one with example data`, () => {
+  it(`solves ${name(__filename)}, part one with example data`, () => {
     expect(part_one(EXAMPLE_1)).toBe(8);
   });
 
@@ -119,7 +120,7 @@ Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red
 Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red
 Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green`;
 
-  it(`solves ${basename(__filename)} part two with example data`, () => {
+  it(`solves ${name(__filename)}, part two with example data`, () => {
     expect(part_two(EXAMPLE_2)).toBe(2286);
   });
 }
