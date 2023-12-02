@@ -1,4 +1,4 @@
-import { name } from "../src/name";
+import { name } from "../lib/name";
 
 /*
 --- Day 2: Cube Conundrum --- You're launched high into the atmosphere! The apex

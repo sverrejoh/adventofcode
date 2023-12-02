@@ -1,4 +1,4 @@
-import { name } from "../src/name";
+import { name } from "../lib/name";
 
 /*
  */
