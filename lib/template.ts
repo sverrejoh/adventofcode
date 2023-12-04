@@ -19,7 +19,6 @@ const main = () => {
 
 if (import.meta.vitest) {
   const { it, expect } = import.meta.vitest;
-  const { basename } = await import("path");
 
   const EXAMPLE_1 = ``;
 
